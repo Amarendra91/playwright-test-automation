@@ -5,9 +5,7 @@ const loginPayLoad = {
   userPassword: 'Iamking@000',
 };
 const orderPayLoad = {
-  orders: [
-    { country: 'United Kingdom', productOrderedId: '6581ca979fd99c85e8ee7faf' },
-  ],
+  orders: [{ country: 'India', productOrderedId: '6581ca399fd99c85e8ee7f45' }],
 };
 
 let token;
