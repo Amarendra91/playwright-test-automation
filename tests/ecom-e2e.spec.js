@@ -72,7 +72,7 @@ test('Login and Order Product via UI only', async ({ browser }) => {
   const orderId = await page
     .locator('.em-spacer-1 .ng-star-inserted')
     .textContent();
-
+  console.log(orderId);
   // Verify order id present inside Order History section
   await page.locator('button[routerlink*="myorders"]').click();
   await page.locator('tbody').waitFor();

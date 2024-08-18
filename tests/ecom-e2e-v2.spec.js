@@ -28,7 +28,6 @@ test('Client app Login, Order product & validate order summary', async () => {
   const couponCode = 'rahulshettyacademy';
   await page.goto('https://rahulshettyacademy.com/client');
   await cardTitles.last().waitFor();
-  console.log(cardTitles);
   const count = await products.count();
   for (let i = 0; i < count; i++) {
     // compare user should be able to find the expected product
@@ -83,7 +82,7 @@ test('Client app Login, Order product & validate order summary', async () => {
   const orderId = await page
     .locator('.em-spacer-1 .ng-star-inserted')
     .textContent();
-
+  console.log(orderId);
   // Verify order id present inside Order History section
   await page.locator('button[routerlink*="myorders"]').click();
   await page.locator('tbody').waitFor();
